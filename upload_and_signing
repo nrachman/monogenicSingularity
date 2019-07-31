@@ -1,0 +1,10 @@
+#To upload
+go to https://cloud.sylabs.io/
+sign by clicking "cloud sign in" on top right
+upload by clicking on desired project and do upload new image
+follow upload instructions. Sign image beforehand if want to prevent warning with singularity pull. Current theory is that this warning causes snakemake to hang because requires you to enter yes
+
+#For instructions on how to sign an image see
+https://sylabs.io/guides/3.0/user-guide/signNverify.html
+
+Make sure when you sign that you use a signature with the correct email address. For example the email address, must match the github account or email address that you used to make you sylabs account. If there is an additional one, singularity pull will issue a warning when the container is downloaded. I believe this prevents snakemake from properly downloading the container.
